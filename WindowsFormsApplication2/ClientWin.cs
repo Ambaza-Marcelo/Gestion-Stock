@@ -89,14 +89,22 @@ namespace WindowsFormsApplication2
 
         private void read_Click(object sender, EventArgs e)
         {
-            Document document = new Document();
-            PdfWriter.GetInstance(document, new FileStream("D:/DEVOIR/clients.pdf", FileMode.Create));
-            document.Open();
+            try
+            {
+                MySqlConnection connection = new MySqlConnection("dataSource = localhost;port=3306;Database = bar;username=root;password =");
+                connection.Open();
+                DataSet ds = new DataSet();
+                MySqlDataAdapter req = new MySqlDataAdapter("select * from clients", connection);
+                req.Fill(ds, "req");
+                dataGridView1.AutoGenerateColumns = true;
+                dataGridView1.DataSource = ds;
+                dataGridView1.DataMember = "req";
 
-            Paragraph p = new Paragraph(idClient.Text+" " + nom.Text + " " + prenom.Text+" "+email.Text+" "+telephone.Text+" "+adresse.Text);
-            document.Add(p);
-            document.Close();
-            MessageBox.Show("PDF a ete genere,Aller voir dans le repertoire D:/DEVOIR");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
 
         private void idClient_TextChanged(object sender, EventArgs e)

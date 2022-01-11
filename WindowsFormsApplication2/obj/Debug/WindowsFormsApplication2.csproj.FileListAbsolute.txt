@@ -17,3 +17,6 @@ D:\VSCODEPRO\GestionBar\WindowsFormsApplication2\bin\Debug\itextsharp.dll
 D:\VSCODEPRO\GestionBar\WindowsFormsApplication2\bin\Debug\itextsharp.pdfa.dll
 D:\VSCODEPRO\GestionBar\WindowsFormsApplication2\bin\Debug\itextsharp.xtra.dll
 D:\VSCODEPRO\GestionBar\WindowsFormsApplication2\bin\Debug\itextsharp.xml
+C:\C#\GestionBar\WindowsFormsApplication2\bin\Debug\WindowsFormsApplication2.exe.config
+C:\C#\GestionBar\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.exe
+C:\C#\GestionBar\WindowsFormsApplication2\obj\Debug\WindowsFormsApplication2.pdb
